@@ -12,7 +12,7 @@ app.get("/", async (req, res) => {
 app.get("/busData", (req, res) => {
   const { From, To, DaysRunOn } = req.query;
   busData
-    .find({ From, To, DaysRunOn })
+    .find({ From, To, DaysRunOn } )
     .then((data, err) => {
       if (!err) {
         res.json(data);
